@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import Mytables from './contenu';
 import SearchBar from './searchBar';
+import filter from './filter'
 import table from './tables';
 import foote from './nom';
 import expirate from './année';
@@ -9,6 +10,7 @@ import Myid from './className';
 import { Table } from 'react-bootstrap';
 import { Form , FormControl} from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
+
 /* année */
 const expiration = expirate();
 /* className collapse */
@@ -29,9 +31,9 @@ function App() {
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                                     <Dropdown>
-                    <Dropdown.Toggle variant="" id="dropdown-pro">
+                    <Dropdown.Toggle variant="grey" id="dropdown-pro">
                     <svg class="svg-inline--fa fa-user fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 448 512" data-fa-i2svg="">
-                        <path fill="white" d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z">
+                        <path fill="grey" d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z">
                         </path>
                     </svg>
                     </Dropdown.Toggle>
@@ -181,12 +183,13 @@ function App() {
         </main>
                 <footer className="py-4 bg-light mt-auto">
                     <div className="container-fluid px-4">
+                    <div className="text-muted">Copyright &copy; Your Website {expiration}
                         <div className="d-flex align-items-center justify-content-between small">
-                            <div className="text-muted">Copyright &copy; Your Website {expiration}</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
+                        </div>
                             </div>
                         </div>
                     </div>
